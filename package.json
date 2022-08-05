@@ -1,0 +1,30 @@
+{
+  "name": "cannon-es-box-sphere-debugger-webgl-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "public/js/bundle.js",
+  "targets": {
+    "main": {
+       "includeNodeModules": true
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "del_files": "del /f /q /s .\\public\\js\\*.*",
+    "dev": "npm run del_files && parcel watch src/main.ts",
+    "compile": "tsc -p tsconfig.release.json",
+    "bundle": "browserify public/js/main.js -o public/js/bundle.js",
+    "uglify": "uglifyjs public/js/bundle.js -o public/js/bundle.js",
+    "release": "npm run compile && npm run bundle && npm run uglify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cannon-es": "^0.19.0",
+    "gl-matrix": "^3.4.3"
+  },
+  "devDependencies": {
+    "@types/gl-matrix": "^3.2.0"
+  }
+}
