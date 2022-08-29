@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ES5",
-        "outDir": "public/js",
+        "outDir": "../public/js",
         "sourceMap": false,
         "types": [
             "node"
@@ -10,7 +10,7 @@
         "esModuleInterop": true
     },
     "include": [
-        "src/**/*.ts"
+        "../src/**/*.ts"
     ],
     "exclude": [
         "node_modules"
